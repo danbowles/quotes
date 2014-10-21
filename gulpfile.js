@@ -1,15 +1,11 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     sass = require('gulp-ruby-sass'),
-    libsass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-csso'),
     jshint = require('gulp-jshint'),
     uglify = require('gulp-uglify'),
-    //imagemin = require('gulp-imagemin'),
-    //cache = require('gulp-cache'),
     filter = require('gulp-filter'),
-    // flatten = require('gulp-flatten'),
     bower = require('gulp-bower'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
@@ -22,7 +18,6 @@ var gulp = require('gulp'),
 
 // Helpers
 function notifyLiveReload(event) {
-  gutil.log('Notified!', event.path);
   var filename = require('path').relative(__dirname, event.path);
 
   server.changed({
@@ -45,10 +40,6 @@ gulp.task('css', function() {
     .pipe(minifycss())
     .pipe(gulp.dest(dist))
     .pipe(notify({ message: 'Styles task complete' }));
-});
-
-gulp.task('libsass', function() {
-  // todo
 });
 
 gulp.task('templates', function() {
