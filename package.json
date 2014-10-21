@@ -1,0 +1,38 @@
+{
+  "name": "Quotes",
+  "version": "0.0.0",
+  "description": "Simple static (for now) page to load in quotes",
+  "authors": [
+    "Dan Bowles <daniel.bowles@gmail.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "http://github.com/danbowles",
+  "devDependencies": {
+    "gulp-ruby-sass": "^0.7.1",
+    "gulp": "^3.8.8",
+    "gulp-rename": "^1.2.0",
+    "del": "^0.1.3",
+    "gulp-concat": "^2.4.1",
+    "gulp-livereload": "^2.1.1",
+    "gulp-uglify": "^1.0.1",
+    "gulp-jshint": "^1.8.5",
+    "gulp-notify": "^2.0.0",
+    "gulp-cache": "^0.2.4",
+    "gulp-autoprefixer": "^1.0.1",
+    "gulp-imagemin": "^1.1.0",
+    "gulp-jade": "^0.9.0",
+    "gulp-filter": "^1.0.2",
+    "gulp-flatten": "0.0.4",
+    "gulp-bower": "0.0.6",
+    "gulp-csso": "^0.2.9",
+    "tiny-lr": "^0.1.4",
+    "gulp-util": "^3.0.1",
+    "express": "^4.9.8",
+    "connect-livereload": "^0.5.0",
+    "gulp-sass": "^1.2.0"
+  },
+  "dependencies": {
+    "jade": "^1.7.0"
+  }
+}

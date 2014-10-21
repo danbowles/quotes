@@ -1,0 +1,22 @@
+{
+  "name": "\"Quotes\"",
+  "version": "0.0.0",
+  "authors": [
+    "Dan Bowles <daniel.bowles@gmail.com>"
+  ],
+  "description": "Simple static (for now) page to load in quotes",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "http://github.com/danbowles",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "scripts/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}

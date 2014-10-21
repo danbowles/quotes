@@ -1,0 +1,112 @@
+@import "partials/reset";
+@import url(http://fonts.googleapis.com/css?family=Lato:300,700);
+@import "../../bower_components/fontawesome/scss/font-awesome";
+
+
+@import "partials/variables";
+@import "partials/typography";
+@import "partials/headers";
+
+$break-mobile: 400px;
+$break-tablet: 700px;
+$break-desktop: 1100px;
+
+
+body {
+  background: #CB6451;
+  transition: background 0.16s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+#nav-link {
+  height: 48px;
+  display: block;
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  top: 4em;
+  right: -12px;
+  text-shadow: $base-text-shadow;
+  opacity: 0.65;
+  transition: all 0.2s ease-in-out;
+  
+  &:hover {
+    right: -2px;
+    opacity: 1.0;
+  }
+  
+  &.active {
+    right: 1em;
+  }
+}
+
+ul {
+  list-style: none;
+  position: absolute;
+  right: -96px;
+  top: 8em;
+  transition: right 0.3s ease-in-out;
+  
+  &.active {
+    right: -48px;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    display: block;
+    height: 48px;
+    width: 96px;
+    border-radius: 24px;
+    box-shadow: $base-text-shadow;
+    transition: box-shadow 0.16s ease-in-out;
+    
+    &:hover, &:active {
+      animation: shadowHover 1s;
+    }
+  }
+}
+
+blockquote {
+  width: 60%;
+  margin: 0 auto;
+  color: white;
+  font-family: 'Lato';
+  margin-top: 1.6em;
+  font-size: 2em;
+  font-weight: 700;
+
+  &.author {
+    margin-top: 1em;
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  @media (min-width: $break-tablet) {
+    font-size: 2.8em;
+    width: 68%;
+
+    &.author {
+      font-size: 2.1em;
+    }
+  }
+}
+
+// Animations
+@keyframes shadowHover {
+  0% {
+    box-shadow: none;
+  }
+
+  20% {
+    box-shadow: 0 0 0px 8px rgba(white, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 0 0px 8px rgba(white, 0.0);
+  }
+}

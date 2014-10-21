@@ -1,0 +1,1 @@
+Simple site designed to show you quotes.

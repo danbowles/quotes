@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    title Yea!
+    link(href='assets/css/main.min.css', rel='stylesheet')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+  body
+    header.title
+      h1 QUOTES
+    a#nav-link(href='#')
+      i.fa.fa-bars.fa-3x
+    nav
+      ul
+        li
+          a(href='#', style='background: #8f5172' )
+        li
+          a(href='#', style='background: #6c7a6b' )
+        li
+          a(href='#', style='background: #d4b055' )
+        li
+          a(href='#', style='background: #4a4452' )
+        li
+          a(href='#', style='background: #3E5D9F' )
+    section.quote
+      blockquote 
+        i.fa.fa-quote-left 
+        | &nbsp;
+        span.content Content precedes design. Design in the absence of content is not design, it's decoration.
+        | &nbsp;
+        i.fa.fa-quote-right
+      blockquote.author Jeffrey Zeldman
+  script(src='assets/js/lib/jquery/dist/jquery.min.js')
+  script(src='assets/js/main.js')
