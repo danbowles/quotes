@@ -1,9 +1,8 @@
-(function($) {
+var $ = require('jquery');
   
-  $(function() {
-    $('#nav-link').click(function() {
-      $(this).toggleClass('active');
-      $('ul').toggleClass('active');
-    })
-  });
-})(window.jQuery);
+$(function() {
+  $('#nav-link').click(function() {
+    $(this).toggleClass('active');
+    $('ul').toggleClass('active');
+  })
+});
