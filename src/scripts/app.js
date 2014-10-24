@@ -1,8 +1,8 @@
-var $ = require('jquery');
-  
-$(function() {
-  $('#nav-link').click(function() {
-    $(this).toggleClass('active');
-    $('ul').toggleClass('active');
-  })
-});
+'use strict';
+
+require('angular');
+
+var app = angular.module('quotesApp', []);
+var helloCtrl = require('./controllers/HelloCtrl.js');
+
+app.controller('HelloCtrl', ['$scope', helloCtrl]);

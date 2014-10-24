@@ -1,13 +1,14 @@
 doctype html
-html
+html(ng-app='quotesApp')
   head
     title Yea!
     link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", rel="stylesheet")
     link(href='assets/css/main.min.css', rel='stylesheet')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-  body
+  body(ng-controller='HelloCtrl')
     header.title
       h1 QUOTES
+      h2 {{test}}
     a#nav-link(href='#')
       i.fa.fa-bars.fa-3x
     nav
