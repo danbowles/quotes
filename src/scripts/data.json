@@ -1,0 +1,26 @@
+{[
+  {
+    "category": "creativity",
+    "style": {
+      "background": "#8f5172"
+    },
+    "quotes": [
+      {
+        "author": "Pablo Picasso",
+        "quote": "Every child is an artist, the problem is staying an artist when you grow up."
+      }
+    ]
+  },
+  {
+    "category": "design",
+    "style": {
+      "background": "#CB6451"
+    },
+    "quotes": [
+      {
+        "author": "Jeffrey Zeldman",
+        "quote": "Content precedes design. Design in the absence of content is not design, it's decoration."
+      }
+    ]
+  }
+]}

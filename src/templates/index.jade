@@ -1,33 +1,25 @@
 doctype html
-html(ng-app='quotesApp')
+html(ng-app='quotesApp', ng-controller='QuoteCtrl')
   head
     title Yea!
     link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", rel="stylesheet")
     link(href='assets/css/main.min.css', rel='stylesheet')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-  body(ng-controller='QuoteCtrl')
-    header.title
+  body(style='background: {{activeQuote.style.background}}')
+    header.title(ng-controller='NavCtrl')
       h1 QUOTES
-    a#nav-link(href='#', ng-controller='NavCtrl', ng-class='{ active: navActive }', ng-click='toggleNavActive()')
-      i.fa.fa-bars.fa-3x
-    nav
-      ul(ng-class='{ active: navActive }')
-        li
-          a(href='#', style='background: #8f5172' )
-        li
-          a(href='#', style='background: #6c7a6b' )
-        li
-          a(href='#', style='background: #d4b055' )
-        li
-          a(href='#', style='background: #4a4452' )
-        li
-          a(href='#', style='background: #3E5D9F' )
+      a#nav-link(href='#', ng-class='{ active: navActive }', ng-click='toggleNavActive()')
+        i.fa.fa-bars.fa-3x
+      nav
+        ul(ng-class='{ active: navActive }')
+          li(ng-repeat='quote in quotes', ng-hide='quote == activeQuote')
+            a(href='#', style='background: {{quote.style.background}}', ng-click='setActiveQuote(quote)')
     section.quote
       blockquote 
         i.fa.fa-quote-left 
         | &nbsp;
-        span.content Content precedes design. Design in the absence of content is not design, it's decoration.
+        span.content {{activeQuote.quotes[0].quote}}
         | &nbsp;
         i.fa.fa-quote-right
-      blockquote.author Jeffrey Zeldman
+      blockquote.author {{activeQuote.quotes[0].author}}
   script(src='assets/js/app.js')
