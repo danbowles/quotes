@@ -5,14 +5,13 @@ html(ng-app='quotesApp')
     link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", rel="stylesheet")
     link(href='assets/css/main.min.css', rel='stylesheet')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-  body(ng-controller='HelloCtrl')
+  body(ng-controller='QuoteCtrl')
     header.title
       h1 QUOTES
-      h2 {{test}}
-    a#nav-link(href='#')
+    a#nav-link(href='#', ng-controller='NavCtrl', ng-class='{ active: navActive }', ng-click='toggleNavActive()')
       i.fa.fa-bars.fa-3x
     nav
-      ul
+      ul(ng-class='{ active: navActive }')
         li
           a(href='#', style='background: #8f5172' )
         li

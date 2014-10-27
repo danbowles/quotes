@@ -1,5 +1,5 @@
 var gulp          = require('gulp');
-var sass          = require('gulp-ruby-sass');
+var sass          = require('gulp-sass');
 var handleErrors  = require('../util/handleErrors');
 var autoprefixer  = require('gulp-autoprefixer');
 var rename        = require('gulp-rename');
@@ -8,7 +8,7 @@ var config        = require('../config').sass;
 
 gulp.task('sass', function() {
   return gulp.src(config.src)
-    .pipe(sass({ style: 'expanded' }))
+    .pipe(sass())
     .pipe(autoprefixer())
     .pipe(gulp.dest(config.dest))
     .pipe(rename({ suffix: '.min' }))

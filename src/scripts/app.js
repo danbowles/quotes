@@ -3,6 +3,6 @@
 require('angular');
 
 var app = angular.module('quotesApp', []);
-var helloCtrl = require('./controllers/HelloCtrl.js');
+var navCtrl = require('./controllers/NavCtrl.js');
 
-app.controller('HelloCtrl', ['$scope', helloCtrl]);
+app.controller('NavCtrl', ['$scope', navCtrl]);
