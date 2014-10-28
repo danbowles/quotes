@@ -15,11 +15,11 @@ html(ng-app='quotesApp', ng-controller='QuoteCtrl')
           li(ng-repeat='quote in quotes', ng-hide='quote == activeQuote')
             a(href='#', style='background: {{quote.style.background}}', ng-click='setActiveQuote(quote)')
     section.quote
-      blockquote 
+      blockquote(ng-class='{ active: quoteSet }')
         i.fa.fa-quote-left 
         | &nbsp;
-        span.content {{activeQuote.quotes[0].quote}}
+        span.content(ng-bind='activeQuote.quotes[0].quote')
         | &nbsp;
         i.fa.fa-quote-right
-      blockquote.author {{activeQuote.quotes[0].author}}
+      blockquote.author(ng-bind='activeQuote.quotes[0].author', ng-class='{ active: quoteSet }') 
   script(src='assets/js/app.js')
