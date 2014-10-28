@@ -45,7 +45,6 @@ header.title {
   text-shadow: none; }
 
 body {
-  background: #CB6451;
   -webkit-transition: background 0.16s ease-in-out;
           transition: background 0.16s ease-in-out;
   position: relative;
@@ -99,12 +98,18 @@ blockquote {
   font-family: 'Lato';
   margin-top: 1.6em;
   font-size: 2em;
-  font-weight: 700; }
+  font-weight: 700;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: all 0.16s ease-in-out;
+          transition: all 0.16s ease-in-out; }
   blockquote.author {
     margin-top: 1em;
     font-size: 1.5em;
     font-style: italic;
     font-weight: 300; }
+  blockquote.active {
+    opacity: 1; }
   @media (min-width: 700px) {
     blockquote {
       font-size: 2.8em;
@@ -112,22 +117,54 @@ blockquote {
       blockquote.author {
         font-size: 2.1em; } }
 
-@-webkit-keyframes shadowHover {
-  0% {
-    box-shadow: none; }
+@-webkit-keyframes slideFadeFromRight {
+  from {
+    left: 150px;
+    opacity: 0; }
 
-  20% {
-    box-shadow: 0 0 0px 8px rgba(255, 255, 255, 0.5); }
+  to {
+    left: 0;
+    opacity: 1; } }
+
+@keyframes slideFadeFromRight {
+  from {
+    left: 150px;
+    opacity: 0; }
+
+  to {
+    left: 0;
+    opacity: 1; } }
+
+@-webkit-keyframes fadeSlideFade {
+  0% {
+    left: 0;
+    opacity: 1; }
+
+  33.33% {
+    opacity: 0;
+    left: -150px; }
+
+  66.67% {
+    opacity: 0;
+    left: 150px; }
 
   100% {
-    box-shadow: 0 0 0px 8px rgba(255, 255, 255, 0); } }
+    opacity: 1;
+    left: 0; } }
 
-@keyframes shadowHover {
+@keyframes fadeSlideFade {
   0% {
-    box-shadow: none; }
+    left: 0;
+    opacity: 1; }
 
-  20% {
-    box-shadow: 0 0 0px 8px rgba(255, 255, 255, 0.5); }
+  33.33% {
+    opacity: 0;
+    left: -150px; }
+
+  66.67% {
+    opacity: 0;
+    left: 150px; }
 
   100% {
-    box-shadow: 0 0 0px 8px rgba(255, 255, 255, 0); } }
+    opacity: 1;
+    left: 0; } }

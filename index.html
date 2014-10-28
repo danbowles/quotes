@@ -16,8 +16,8 @@
       </nav>
     </header>
     <section class="quote">
-      <blockquote> <i class="fa fa-quote-left"> </i>&nbsp;<span class="content">{{activeQuote.quotes[0].quote}}</span>&nbsp;<i class="fa fa-quote-right"></i></blockquote>
-      <blockquote class="author">{{activeQuote.quotes[0].author}}</blockquote>
+      <blockquote ng-class="{ active: quoteSet }"><i class="fa fa-quote-left"> </i>&nbsp;<span ng-bind="activeQuote.quotes[0].quote" class="content"></span>&nbsp;<i class="fa fa-quote-right"></i></blockquote>
+      <blockquote ng-bind="activeQuote.quotes[0].author" ng-class="{ active: quoteSet }" class="author"> </blockquote>
     </section>
   </body>
   <script src="assets/js/app.js"></script>
