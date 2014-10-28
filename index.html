@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="quotesApp" ng-controller="QuoteCtrl">
+  <head>
+    <title>Yea!</title>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/main.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body style="background: {{activeQuote.style.background}}">
+    <header ng-controller="NavCtrl" class="title">
+      <h1>QUOTES</h1><a id="nav-link" href="#" ng-class="{ active: navActive }" ng-click="toggleNavActive()"><i class="fa fa-bars fa-3x"></i></a>
+      <nav>
+        <ul ng-class="{ active: navActive }">
+          <li ng-repeat="quote in quotes" ng-hide="quote == activeQuote"><a href="#" style="background: {{quote.style.background}}" ng-click="setActiveQuote(quote)"></a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="quote">
+      <blockquote> <i class="fa fa-quote-left"> </i>&nbsp;<span class="content">{{activeQuote.quotes[0].quote}}</span>&nbsp;<i class="fa fa-quote-right"></i></blockquote>
+      <blockquote class="author">{{activeQuote.quotes[0].author}}</blockquote>
+    </section>
+  </body>
+  <script src="assets/js/app.js"></script>
+</html>
