@@ -1,5 +1,5 @@
 module.exports = function($scope) {
-  $scope.navActive = true;
+  $scope.navActive = false;
 
   $scope.toggleNavActive = function() {
     if ($scope.navActive) {
